@@ -43,7 +43,7 @@ const Experience = () => {
   return (
     <>
     <motion.div variants={textVariant()}>
-      <p className='text-[20px] text-secondary  text-bold'>What I have done so Far...</p>
+      <p className='text-[20px] text-secondary text-bold pt-[5%]'>What I have done so Far...</p>
       <h2 className='text-[25px] text-bold'>Work Experience</h2>
     </motion.div>
     <div className='mt-20 flex flex-col'>
@@ -53,7 +53,24 @@ const Experience = () => {
           <ExperienceCard key={index} experience={experience}/>
         ))}
       </VerticalTimeline>
-
+    <video
+    autoPlay
+    loop
+    muted
+    style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      zIndex: -1,
+      opacity: 0.3
+    }}
+    >
+    <source src="src/assets/background.mp4" type="video/mp4" />
+    
+    </video>
     </div>
     
     </>

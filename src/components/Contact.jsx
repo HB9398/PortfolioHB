@@ -2,7 +2,7 @@ import React from 'react'
 import { useState,useRef } from 'react';
 import {motion} from 'framer-motion';
 import emailjs from '@emailjs/browser';
-//import { Earth } from './canvas';
+import { Earth } from './canvas';
 import { styles } from '../styles';
 import MainCanvas from './MainCanvas';
 import { Canvas } from '@react-three/fiber';
@@ -123,7 +123,7 @@ const Contact = () => {
       </form> 
     
       </motion.div>
-      {/* <motion.div
+        <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
@@ -132,10 +132,26 @@ const Contact = () => {
         
         </MainCanvas> 
       </motion.div> 
-      <motion.p variants={fadeIn("","",0.1,1)} className=" textAlign:'left' mt-auto mb-auto  xl:flex-1 xl:h-auto md:h-[550px] h-[550px] text-[97px] text-bold leading-[30px]">
-     Thank you!
-      </motion.p>
-        */} 
+      <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: -1,
+          opacity: 0.3
+        }}
+        >
+      <source src="src/assets/background.mp4" type="video/mp4" />
+        
+      </video>
+       
+     
        
     </div>
   )

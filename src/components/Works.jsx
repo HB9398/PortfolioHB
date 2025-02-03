@@ -58,7 +58,7 @@ const Works = () => {
 
   return (
     <div className='w-full' >
-      <p className='text-[20px] text-secondary text-bold'>Research Projects...</p>
+      <p className='text-[20px] text-secondary text-bold pt-[5%]'>Research Projects...</p>
       <h2 className='text-[25px] text-bold'>Projects</h2>
 
       <div className='w-full'>
@@ -80,6 +80,24 @@ const Works = () => {
           ))}
         </div>
       </div>
+      <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: -1,
+          opacity: 0.3
+        }}
+        >
+        <source src="src/assets/background.mp4" type="video/mp4" />
+        
+      </video>
     </div>
   );
 };

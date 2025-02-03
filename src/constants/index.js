@@ -38,20 +38,35 @@ import {
   } from "../assets";
   
   
+  
   export const navLinks = [
     {
-      id: "about",
-      title: "About",
+      id: "home",
+      title: "Home",
+      path: "/",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "experience-tech",
+      title: "Experience & Tech",
+      path: "/experience-tech",
+    },
+    {
+      id: "works",
+      title: "Works",
+      path: "/works",
+    },
+    {
+      id: "feedbacks",
+      title: "Feedbacks",
+      path: "/feedbacks",
     },
     {
       id: "contact",
       title: "Contact",
+      path: "/contact",
     },
   ];
+  
   
   const services = [
     {
@@ -370,5 +385,6 @@ import {
     },
   ];
   
-
+  
+  
   export { services, technologies, experiences, testimonials, projects };

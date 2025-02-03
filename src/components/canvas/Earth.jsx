@@ -1,52 +1,34 @@
-import React, { useRef, memo } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-
+import * as THREE from 'three';
 
 const Earth = () => {
-  const { scene } = useGLTF('./planet/scene.gltf');
+  const { scene, animations } = useGLTF('src/assets/earth/scene.gltf');
+  const mixerRef = useRef(null);
+
+  // Update the animation frame
+  useFrame((_, delta) => {
+    if (mixerRef.current) {
+      mixerRef.current.update(delta);
+    }
+  });
+
+  useEffect(() => {
+    if (animations.length > 0) {
+      const mixer = new THREE.AnimationMixer(scene);
+      mixerRef.current = mixer;
+      const action = mixer.clipAction(animations[0]);
+      action.play();
+    }
+  }, [animations, scene]);
 
   return (
-    //for earth scale=0.15
-    <group scale={0.15} position={[0, 2, 0]} rotation={[0, Math.PI, 0]}> {/* Adjust scale and position */}
-
-      <spotLight position={[-20, 50, 10]} angle={0.12} penumbra={1} intensity={1} castShadow shadow-mapSize={1024} />
-      <pointLight intensity={1} />
-
-      <primitive object={scene} rotation={[-0.01, -0.2, -0.1]} />
+    <group scale={0.05} position={[0, -1, 0]}>
+  
+      <primitive object={scene} />
     </group>
   );
 };
 
-// Wrap the component with React.memo to prevent unnecessary re-renders
-export default memo(Earth);
-// import React, { useRef } from 'react';
-// import { useGLTF } from '@react-three/drei';
-// import { useFrame } from '@react-three/fiber';
-// import { OrbitControls } from '@react-three/drei';
-// const Earth = () => {
-//   const { scene } = useGLTF('./planet/scene.gltf');
-
-
-//   return (
-//     <group >
-      
-//       <spotLight
-//         position={[-20, 50, 10]}
-//         angle={0.12}
-//         penumbra={1}
-//         intensity={1}
-//         castShadow
-//         shadow-mapSize={1024}
-//       />
-//       <pointLight intensity={1} />
-//       <primitive object={scene} scale={0.12} position={[0, 1.5, 0]} rotation={[-0.01, -0.2, -0.1]} />
-        
-//     </group>
-
-     
-//   );
-// };
-
-// export default Earth;
+export default React.memo(Earth);
