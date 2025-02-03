@@ -95,7 +95,7 @@ const Works = () => {
           opacity: 0.3
         }}
         >
-        <source src="src/assets/background.mp4" type="video/mp4" />
+        <source src="./background.mp4" type="video/mp4" />
         
       </video>
     </div>
