@@ -45,7 +45,7 @@ const Hero = () => {
     opacity: 0.8
   }}
   >
-  <source src="./background.mp4" type="video/mp4" />
+  <source src="/assets/background.mp4" type="video/mp4" />
   
   </video>
   <MainCanvas>

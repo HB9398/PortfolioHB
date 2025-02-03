@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tilt } from 'react-tilt';
-import { github } from '../assets';
+import { github } from '../../public/assets';
 import { projects } from '../constants';
 import { SectionWrapper } from '../hoc';
 
@@ -95,7 +95,7 @@ const Works = () => {
           opacity: 0.3
         }}
         >
-        <source src="./background.mp4" type="video/mp4" />
+        <source src="/assets/background.mp4" type="video/mp4" />
         
       </video>
     </div>

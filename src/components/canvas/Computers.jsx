@@ -5,7 +5,7 @@ import * as THREE from 'three';
 
 const Computers = () => {
   // Use a simplified model with a lower-poly count if available
-  const { scene, animations } = useGLTF('./cute_robot/scene.gltf');
+  const { scene, animations } = useGLTF('/assets/cute_robot/scene.gltf');
   const mixerRef = useRef();
 
   // Create a mixer and store it in the ref

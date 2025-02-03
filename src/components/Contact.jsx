@@ -147,9 +147,9 @@ const Contact = () => {
           opacity: 0.3
         }}
         >
-      <source src="./assets/background.mp4" type="video/mp4" />
+      <source src="/assets/background.mp4" type="video/mp4" />
         
-      </video>
+       </video>
        
      
        

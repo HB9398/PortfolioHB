@@ -35,7 +35,7 @@ import {
     glitchjs,
     databricks,
 
-  } from "../assets";
+  } from "../../public/assets";
   
   
   

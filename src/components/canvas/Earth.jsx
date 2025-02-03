@@ -4,7 +4,7 @@ import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
 const Earth = () => {
-  const { scene, animations } = useGLTF('./earth/scene.gltf');
+  const { scene, animations } = useGLTF('/assets/earth/scene.gltf');
   const mixerRef = useRef(null);
 
   // Update the animation frame
