@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // Header Section
 const HeaderSection = () => (
   <header className="pt-32 pb-10 bg-transparent rounded-2xl shadow-lg mb-8 text-center">
-    <h1 className="text-4xl font-bold mb-2 text-white drop-shadow-lg">IA Collaborative Portfolio</h1>
+    <h1 className="text-4xl font-bold mb-2 text-white drop-shadow-lg">IA Portfolio</h1>
   </header>
 );
 

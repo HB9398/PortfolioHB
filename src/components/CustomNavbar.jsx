@@ -42,7 +42,7 @@ const CustomNavbar = () => {
       >
         <img src={logo} alt="logo" className="w-[48px] h-[48px] object-contain" />
         <p className="text-white text-[20px] font-extrabold cursor-pointer flex drop-shadow-lg tracking-wide">
-          <span className="sm:block hidden"> Haren Bhatia &nbsp; </span>
+          <span className="sm:block hidden"> Portfolio &nbsp; </span>
         </p>
       </Link>
       {/* Desktop Navbar */}
