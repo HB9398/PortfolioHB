@@ -72,7 +72,7 @@ const ProjectCard = ({ title, subtitle, description, link, icon, tags }) => (
       ))}
     </div>
     <p className="text-[#5a5544] text-sm mb-4 text-center leading-relaxed flex-1">{description}</p>
-    <a href={link} className="text-primary font-semibold underline group-hover:text-primary-dark mb-2">View</a>
+    {link && <a href={link} className="text-primary font-semibold underline group-hover:text-primary-dark mb-2">View</a>}
   </div>
 );
 
@@ -84,7 +84,7 @@ const ProjectsTable = () => (
       <ProjectCard 
         title="Coin Crew"
         subtitle={<span>Microsoft Case Competition Winner <span className='inline-block'>🏆</span></span>}
-        description="Designed an innovative payment product for Microsoft’s case competition, focusing on seamless digital and physical currency integration for Gen Z."
+        description="Designed an innovative payment product for Microsoft’s case competition, focusing on young, preteen and teen segments and designing products for their needs while accounting for funneling them into a financially stable future."
         link="https://www.canva.com/design/DAGdJAKFC1o/LmgFxRrYugQS-vsApXt6KQ/edit?utm_content=DAGdJAKFC1o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
         icon={<img src="/assets/coincrew_project.png" alt="Coin Crew thumbnail" className="w-full h-full object-contain" />}
         tags={["Product Strategy", "Collaboration", "Rapid Prototyping"]}
@@ -100,7 +100,7 @@ const ProjectsTable = () => (
       <ProjectCard 
         title="Co-habit"
         subtitle="Design Thinking"
-        description="Developed a chore-sharing and conflict resolution app for cohabitants, leveraging behavioral nudges and gamification. Presented as a final project for IMT 565."
+        description="Developed a chore-sharing and conflict resolution app for cohabitants, leveraging behavioral nudges and gamification."
         link="https://www.canva.com/design/DAGGqTZ_FUU/XYX7-w2t4JkCSAvpUqEzOg/edit?utm_content=DAGGqTZ_FUU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
         icon={<img src="/assets/cohabit_project.png" alt="Co-habit thumbnail" className="w-full h-full object-contain" />}
         tags={["Design Thinking", "Behavioral Science", "Teamwork"]}
@@ -109,7 +109,6 @@ const ProjectsTable = () => (
         title="Form Filling Chatbot"
         subtitle="AI PoC development"
         description="Conversational AI assistant that demystifies complex tax forms and improves accessibility. Long-term goal: make form completion easy for everyone using natural language and smart automation."
-        link="#form-filling-chatbot"
         icon={<img src="/assets/form_filling_chatbot.png" alt="Form Filling Chatbot thumbnail" className="w-full h-full object-contain" />}
         tags={["AI Accessibility", "Conversational UX", "Automation"]}
       />

@@ -67,7 +67,7 @@ import {
     },
     {
       id: "iacollab-portfolio",
-      title: "IA Collab Portfolio",
+      title: "Portfolio",
       path: "/iacollab-portfolio",
     },
   ];
