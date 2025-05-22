@@ -11,6 +11,7 @@ const Tech = React.lazy(() => import('./components/Tech'));
 const Works = React.lazy(() => import('./components/Works'));
 const Feedbacks = React.lazy(() => import('./components/Feedbacks'));
 const Contact = React.lazy(() => import('./components/Contact'));
+const IACollabPortfolio = React.lazy(() => import('./components/IACollabPortfolio'));
 
 const App = () => {
   const [showPopup, setShowPopup] = useState(true);
@@ -53,6 +54,7 @@ const App = () => {
               <Route path="/experience-tech" element={<><Experience /><Tech isMobileSelected={isMobileSelected} /></>} />
               
               {/* Other Pages */}
+              <Route path="/iacollab-portfolio" element={<IACollabPortfolio />} />
               <Route path="/works" element={<Works />} />
               <Route path="/feedbacks" element={<Feedbacks />} />
               <Route path="/contact" element={<Contact />} />

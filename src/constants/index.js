@@ -65,6 +65,11 @@ import {
       title: "Contact",
       path: "/contact",
     },
+    {
+      id: "iacollab-portfolio",
+      title: "IA Collab Portfolio",
+      path: "/iacollab-portfolio",
+    },
   ];
   
   
